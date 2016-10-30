@@ -12,6 +12,8 @@ namespace PlatformerPro
 	public class EnterableDoor : Door
 	{
 
+		public GameObject warpPoint;
+
 		/// <summary>
 		/// The door entry method.
 		/// </summary>
@@ -38,7 +40,7 @@ namespace PlatformerPro
 		virtual protected void OnEntered(Character character)
 		{
 			if (Entered != null)
-			{
+			{https://drive.google.com/drive/folders/0BxsGRhnN6pPkZ0l1bG4yTE8tRWs
 				Entered(this, new DoorEventArgs(this, character));
 			}
 		}
@@ -93,6 +95,13 @@ namespace PlatformerPro
 		virtual protected void DoEnter(Character character)
 		{
 			OnEntered (character);
+
+			if(warpPoint)
+			{
+				character.gameObject.transform.position = new Vector3(warpPoint.transform.position.x,warpPoint.transform.position.y,character.gameObject.transform.position.z);
+			}
+
+
 		}
 	}
 
