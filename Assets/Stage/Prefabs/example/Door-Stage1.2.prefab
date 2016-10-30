@@ -121,6 +121,7 @@ MonoBehaviour:
   friction: -1
   keyType: 
   startOpen: 1
+  warpPoint: {fileID: 0}
   doorEntryMethod: 1
   actionKey: 0
 --- !u!114 &11425248
@@ -150,7 +151,7 @@ MonoBehaviour:
     vectorValue: {x: 0, y: 0}
     boolValue: 0
     floatValue: 0
-  - responseType: 19
+  - responseType: 15
     delay: 0
     targetGameObject: {fileID: 0}
     targetComponent: {fileID: 0}
